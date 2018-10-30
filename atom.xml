@@ -5,9 +5,9 @@
   
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://yoursite.com/"/>
+  <link href="https://nicetomeetu21.github.io/"/>
   <updated>2018-10-28T14:52:01.453Z</updated>
-  <id>http://yoursite.com/</id>
+  <id>https://nicetomeetu21.github.io/</id>
   
   <author>
     <name>hk</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>Tenka1 Programmer Contest (C,D,E)</title>
-    <link href="http://yoursite.com/2018/10/28/Tenka1-Programmer-Contest/"/>
-    <id>http://yoursite.com/2018/10/28/Tenka1-Programmer-Contest/</id>
+    <link href="https://nicetomeetu21.github.io/2018/10/28/Tenka1-Programmer-Contest/"/>
+    <id>https://nicetomeetu21.github.io/2018/10/28/Tenka1-Programmer-Contest/</id>
     <published>2018-10-28T12:43:37.000Z</published>
     <updated>2018-10-28T14:52:01.453Z</updated>
     
@@ -32,10 +32,10 @@
     
     </summary>
     
-      <category term="ACM" scheme="http://yoursite.com/categories/ACM/"/>
+      <category term="ACM" scheme="https://nicetomeetu21.github.io/categories/ACM/"/>
     
     
-      <category term="AtCoder" scheme="http://yoursite.com/tags/AtCoder/"/>
+      <category term="AtCoder" scheme="https://nicetomeetu21.github.io/tags/AtCoder/"/>
     
   </entry>
   
