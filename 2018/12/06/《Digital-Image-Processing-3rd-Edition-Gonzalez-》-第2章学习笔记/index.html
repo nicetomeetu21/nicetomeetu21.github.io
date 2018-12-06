@@ -109,16 +109,26 @@
 
 
 
-  <meta name="description" content="逢山开路，遇水架桥。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="nicetomeetu">
-<meta property="og:url" content="https://nicetomeetu21.github.io/archives/2018/11/index.html">
+  <meta name="description" content="2 Digital Image Fundamentals Those who wish to succeed must ask the right preliminary questions —— Aristotle   Preview本章的第一个目的是向你介绍数字图像处理中的一些基础概念，它们将在本书中沿用。  section 2.1：人类视觉系统的机理，包括人眼成像、光线适应性和辨别能力。 s">
+<meta name="keywords" content="学习笔记,《Digital Image Processing (3rd Edition) [Gonzalez]》">
+<meta property="og:type" content="article">
+<meta property="og:title" content="《Digital Image Processing (3rd Edition) [Gonzalez]》 第2章学习笔记">
+<meta property="og:url" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/index.html">
 <meta property="og:site_name" content="nicetomeetu">
-<meta property="og:description" content="逢山开路，遇水架桥。">
+<meta property="og:description" content="2 Digital Image Fundamentals Those who wish to succeed must ask the right preliminary questions —— Aristotle   Preview本章的第一个目的是向你介绍数字图像处理中的一些基础概念，它们将在本书中沿用。  section 2.1：人类视觉系统的机理，包括人眼成像、光线适应性和辨别能力。 s">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.1.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.2.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.4.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.6.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.7.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.8.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.9.png">
+<meta property="og:updated_time" content="2018-12-06T14:24:10.728Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="nicetomeetu">
-<meta name="twitter:description" content="逢山开路，遇水架桥。">
+<meta name="twitter:title" content="《Digital Image Processing (3rd Edition) [Gonzalez]》 第2章学习笔记">
+<meta name="twitter:description" content="2 Digital Image Fundamentals Those who wish to succeed must ask the right preliminary questions —— Aristotle   Preview本章的第一个目的是向你介绍数字图像处理中的一些基础概念，它们将在本书中沿用。  section 2.1：人类视觉系统的机理，包括人眼成像、光线适应性和辨别能力。 s">
+<meta name="twitter:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.1.png">
 
 
 
@@ -127,7 +137,7 @@
 
 
 
-  <link rel="canonical" href="https://nicetomeetu21.github.io/archives/2018/11/"/>
+  <link rel="canonical" href="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/"/>
 
 
 
@@ -137,7 +147,7 @@
   };
 </script>
 
-  <title>归档 | nicetomeetu</title>
+  <title>《Digital Image Processing (3rd Edition) [Gonzalez]》 第2章学习笔记 | nicetomeetu</title>
   
 
 
@@ -184,7 +194,7 @@
     
   
 
-  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-archive">
+  <!-- hexo-inject:begin --><!-- hexo-inject:end --><div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/nicetomeetu21" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,7 +255,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />归档</a>
   </li>
@@ -317,291 +327,248 @@
           
             
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
-
           
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-      
-      <span class="archive-page-counter">
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hk">
+      <meta itemprop="description" content="逢山开路，遇水架桥。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nicetomeetu">
+    </span>
+
+    
+      <header class="post-header">
+
         
         
+          <h1 class="post-title" itemprop="name headline">《Digital Image Processing (3rd Edition) [Gonzalez]》 第2章学习笔记
+              
+            
+          </h1>
         
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-06 15:34:45 / 修改时间：22:24:10" itemprop="dateCreated datePublished" datetime="2018-12-06T15:34:45+08:00">2018-12-06</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
           
-        
-        嗯..! 目前共计 8 篇日志。 继续努力。
-      </span>
-      
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Image-Processing/" itemprop="url" rel="index"><span itemprop="name">Image Processing</span></a></span>
 
-      
-
-        
-        
-        
-
-        
+                
+                
+              
+            </span>
           
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
 
-        
+          
+            
+          
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+          
+          
+             <span id="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/" class="leancloud_visitors" data-flag-title="《Digital Image Processing (3rd Edition) [Gonzalez]》 第2章学习笔记">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
 
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/30/Dwango-Programming-Contest-V/" itemprop="url">
-              
-                <span itemprop="name">Dwango Programming Contest V (A,B,C)</span>
-              
-            </a>
-        
-      </h2>
+          
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-30T14:57:14+08:00"
-              content="2018-11-30" >
-          11-30
-        </time>
-      </div>
+          
 
-    </header>
-  </article>
+          
 
+        </div>
+      </header>
+    
 
-
-      
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/29/Educational-Codeforces-Round-55/" itemprop="url">
-              
-                <span itemprop="name">Educational Codeforces Round 55(A-E,G)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-29T16:18:16+08:00"
-              content="2018-11-29" >
-          11-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/20/Codeforces-Round-522-Div-2/" itemprop="url">
-              
-                <span itemprop="name">Codeforces Round #522 (Div. 2) (A-E)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-20T14:49:14+08:00"
-              content="2018-11-20" >
-          11-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
 
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/18/Codeforces-Round-520-Div-2/" itemprop="url">
-              
-                <span itemprop="name">Codeforces Round #520 (Div. 2)（A-E）</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-18T12:46:50+08:00"
-              content="2018-11-18" >
-          11-18
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/16/Educational-Codeforces-Round-54/" itemprop="url">
-              
-                <span itemprop="name">Educational Codeforces Round 54 (A-F)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-16T15:08:50+08:00"
-              content="2018-11-16" >
-          11-16
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+        <h1 id="2-Digital-Image-Fundamentals"><a href="#2-Digital-Image-Fundamentals" class="headerlink" title="2 Digital Image Fundamentals"></a>2 Digital Image Fundamentals</h1><blockquote>
+<p>Those who wish to succeed must ask the right preliminary questions —— Aristotle </p>
+</blockquote>
+<h2 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h2><p>本章的第一个目的是向你介绍数字图像处理中的一些基础概念，它们将在本书中沿用。</p>
+<ul>
+<li><em>section 2.1</em>：人类视觉系统的机理，包括人眼成像、光线适应性和辨别能力。</li>
+<li><em>section 2.2</em>：光以及其他电磁波谱的组成部分，它们的成像特性。</li>
+<li><em>section 2.3</em>：图像传感器和它们如何成像。</li>
+<li><em>section 2.4</em>：均匀图像采样和灰度量化的一些概念。</li>
+<li><em>section 2.5</em>：处理了各式各样的像素之间的基本关系。</li>
+<li><em>section 2.6</em>：介绍本书中主要使用的数学工具。</li>
+</ul>
+<p>第二个目的是帮助你建立一种 &quot;感觉&quot;，其关于如何使用这些工具去完成各种各样的基础图像处理任务。工具的范围和用法亦将随后文而扩展。</p>
+<a id="more"></a>
+<h2 id="2-1-Elements-of-Visual-Perception"><a href="#2-1-Elements-of-Visual-Perception" class="headerlink" title="2.1 Elements of Visual Perception"></a>2.1 Elements of Visual Perception</h2><p>虽然数字图像处理是建立在数学和概率公式的基础上，但选择合适的技术仍需要人的直觉和分析，而这些选择通常基于主观的视觉判断上。所以本书选择从建立一个对人类视觉感知的基础的理解开始。</p>
+<p>由于篇幅有限不可能讲太细。我们的兴趣主要集中在与人类生成图像并感知相关的机理和参数，以及通过一些因素来学习人类视觉的物理限制，它们也同样用于数字图像的处理。</p>
+<h3 id="2-1-1-Structure-of-the-Human-Eye"><a href="#2-1-1-Structure-of-the-Human-Eye" class="headerlink" title="2.1.1 Structure of the Human Eye"></a>2.1.1 Structure of the Human Eye</h3><img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.1.png">
+<p>图2.1是一个简化版的人眼横截面图。眼球近似一个球，大约 20 mm 的平均直径。有三层薄膜包围眼球：<em>cornea</em>（眼角膜），<em>sclera</em> （巩膜）外壳，<em>choroid</em>（脉络膜），<em>retina</em>（视网膜）。</p>
+<p><em>cornea</em> 是一种硬而透明的组织，覆盖着眼睛的前表面。与 <em>cornea</em> 相连的是 <em>sclera</em> ，一层不透明的膜覆眼球的剩余区域。</p>
+<p><em>choroid</em> 在 <em>sclera</em> 的正下方，这层膜包含了血管网络，作为滋养眼球的主要来源。<em>choroid</em> 在最前端分为<em>ciliary body</em>（睫状体） 和 <em>iris</em>（虹膜），后者通过收缩和扩张来控制进入眼球光线的数量。</p>
+<p><em>lens</em>（晶状体）由纤维细胞的同心层构成，通过依附于<em>ciliary body</em> 的 <em>ciliary fibers</em> 悬浮。 </p>
+<p>眼睛最里面的膜是 <em>retina</em>，它布满了整个眼球后部。当人眼适当聚焦，来自外部物体的光线将在其上成像。图像由 <em>retina</em> 上离散的光线接收器提供。接收器主要分两种：<em>cones</em>（锥状体） 和 <em>rods</em>（杆状体）。</p>
+<p><em>cones</em> 的数量在600-700万之间，主要位于视网膜的中间部分 <em>fovea</em>（中央凹），其对颜色高度敏感。人们主要通过它们来分辨图像细节，因为每一个 <em>cones</em> 都连着自己的神经末端。</p>
+<p><em>rods</em> 的数量大约7500-15000万，分布在 <em>retina</em> 表面，它们与彩色视觉无关，而对低照明度敏感。它们用来给出视野内的一般的总体的图像。</p>
+<img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.2.png">
+<p>图2.2显示了右眼横截面中视神经出现区域的 <em>rods</em> 和 <em>cons</em> 的密度。可以注意到，<em>cons</em> 的密度从 <em>fovea</em> 往外由大变小，而 <em>rods</em> 的密度先变大后变小，距视轴20°左右最大。当然除盲点外。</p>
+<p><em>fovea</em> 本身是一个直径 1.5 mm 的圆形凹槽，为了便于讨论，我们将它视为 $1.5mm * 1.5mm$ 的方形传感器阵列。其上 <em>cons</em> 的密度大约 $150000 mm^2$，即眼球中最敏锐的区域有大约 33700 个。从自然分辨能力上讲，一个 电荷耦合器（<em>charge-coupled device</em>）成像芯片可以有如此多的传感器在$5mm*5mm$的阵列中。 简而言之，眼睛在分辨细节上的基础能力和现在的电子成像传感器相当。</p>
+<h3 id="2-1-2-Image-Formation-in-the-Eye"><a href="#2-1-2-Image-Formation-in-the-Eye" class="headerlink" title="2.1.2 Image Formation in the Eye"></a>2.1.2 Image Formation in the Eye</h3><p>普通摄影相机中，镜头有固定的焦距聚焦不同的距离是通过变化镜头和成像平面的的距离实现的，成像平面即胶片所在的位置。人眼则相反，镜头和成像区域（<em>retina</em>）的距离是固定的，合适的聚焦距离由改变晶状体（<em>lens</em>）的形状得到。这个操作由睫状体（<em>ciliary body</em>）完成，根据目标距离的远近扁平或加厚晶状体。</p>
+<h3 id="2-1-3-Brightness-Adaptation-and-Discrimination"><a href="#2-1-3-Brightness-Adaptation-and-Discrimination" class="headerlink" title="2.1.3 Brightness Adaptation and Discrimination"></a>2.1.3 Brightness Adaptation and Discrimination</h3><h4 id="Brightness-Adaptation"><a href="#Brightness-Adaptation" class="headerlink" title="Brightness Adaptation"></a>Brightness Adaptation</h4><p>由于数字图像被显示为一个离散的灰度集合。人眼对不同灰度等级的分辨能力在展示图像处理的成果上很重要。人眼视觉系统可接受的光强度的范围很大，从暗示阈值（<em>scotopic threshold</em>）到强光极限（<em>glare limit</em>）。实验数据指出，入射光强度和主观亮度（<em>subjective brightness</em>）是对数函数关系。</p>
+<img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.4.png">
+<p>图2.4即 光强-主观亮度图。长实线代表了被视觉系统接受的光强度。亮视觉（<em>photopic</em>）范围大约$10^6$。由暗视觉（<em>scotopic</em>）转变为亮视觉的范围大约是 0.001mL 至 0.1mL（<em>millilambert</em>）。</p>
+<p>对图中动态范围的解释中，最关键的一点在于视觉系统不能在一个范围中同时工作，即同时只能适应于某一点的光强。它通过改变整体的敏感性来实现这么大范围的适应性改变，即亮度适应现象（<em>brightness adaption</em>）。眼睛可同时辨别的亮度范围较整个适应范围来说很小。对任意给定的条件集，视觉系统的当前感光等级被称为亮度适应等级（<em>brightness adaption level</em>），例如图中点$B_a$。短斜线表示人眼适应于这个亮度等级下时，主观亮度的范围，低于$B_b$的光将成为不可辨别的黑色，斜线上端实际上没有限制，但是更高强度的光会将亮度适应等级提高。</p>
+<h4 id="Brightness-Discrimination"><a href="#Brightness-Discrimination" class="headerlink" title="Brightness Discrimination"></a>Brightness Discrimination</h4><h5 id="sample-1"><a href="#sample-1" class="headerlink" title="sample 1"></a>sample 1</h5><p>关于人眼在某一个特定适应等级下，对光强的变化的辨别能力，一个著名的实验：对象注视一个足够大的充满视野的均匀发光区，这个区域是典型的漫反射体，使用强度$I$的可变光源从后照射它。在其中心的小圆形范围内增加强度为$\Delta I$的闪光。</p>
+<p>如果$\Delta I$不够亮，对象说&quot;no&quot;，最终加到够亮对象会一直说&quot;yes&quot;。分量$\Delta I_c/I$被称为（<em>Weber ratio</em>）,其中$\Delta I_c$是背景为$I$时可辨别照明度增加量的$50\%$。$\Delta I_c/I$越小代表可辨别度越好。</p>
+<img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.6.png">
+<p>图2.6显示，低照明度情况下辨别能力弱，但其随着背景光照增强而迅速增强。两条曲线反映出在低照明度下视觉主要由 <em>rods</em> 提供，而高等级下由 <em>cones</em>提供。</p>
+<h5 id="sample-2"><a href="#sample-2" class="headerlink" title="sample 2"></a>sample 2</h5><p>如果背景光强度固定，且用其他光源代替闪光，将其强度从不能被觉察逐渐变化到始终被察觉，典型的观察者可以观察到24次不同的强度变化。粗略地看，这个结果和一个人一张单色图像的任意一点能观察到的不同灰度数量相关。但并不是说一张图象可以被表示为这么点灰度，因为当人眼扫图片时，平均背景发生了变化，故允许在新的适应等级上察觉到不同的强度增量集。最终结果是在整体灰度辩别上眼睛能适应更宽的范围。</p>
+<p>这两个现象证明被感知的亮度不是简单的关于强度的函数。第一个现象基于一个事实，视觉系统倾向于在不同光强度的边界产生&quot;下冲&quot;或&quot;上冲&quot;现象，如图 2.6。这样带圆齿的带被称为 <em>Mach bands</em></p>
+<img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.7.png">
+<p>第二个现象被称为 <em>simultaneous contrast</em> ，基于一个事实，一个区域可观察到的亮度不简单取决于其灰度，如图 2.8。</p>
+<img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.8.png">
+<p>另一些人类感知现象是视觉错觉，眼睛填充了不存在的信息或错误地赶制了物体的几何特性，如图 2.9。</p>
+<img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.9.png">
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2018/11/13/Codeforces-Round-519-A-F/" itemprop="url">
-              
-                <span itemprop="name">Codeforces Round #519 (A-F)</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-11-13T16:02:01+08:00"
-              content="2018-11-13" >
-          11-13
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-      
-
     </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/学习笔记/" rel="tag"><i class="fa fa-tag"></i> 学习笔记</a>
+          
+            <a href="/tags/《Digital-Image-Processing-3rd-Edition-Gonzalez-》/" rel="tag"><i class="fa fa-tag"></i> 《Digital Image Processing (3rd Edition) [Gonzalez]》</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/11/30/Dwango-Programming-Contest-V/" rel="next" title="Dwango Programming Contest V (A,B,C)">
+                <i class="fa fa-chevron-left"></i> Dwango Programming Contest V (A,B,C)
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+  </div>
 
 
           </div>
           
+
+  
+    <div id="gitalk-container">
+    </div>
+  
+
+
 
         </div>
         
@@ -622,8 +589,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -758,6 +734,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Digital-Image-Fundamentals"><span class="nav-text">2 Digital Image Fundamentals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Preview"><span class="nav-text">Preview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Elements-of-Visual-Perception"><span class="nav-text">2.1 Elements of Visual Perception</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-Structure-of-the-Human-Eye"><span class="nav-text">2.1.1 Structure of the Human Eye</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-Image-Formation-in-the-Eye"><span class="nav-text">2.1.2 Image Formation in the Eye</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-Brightness-Adaptation-and-Discrimination"><span class="nav-text">2.1.3 Brightness Adaptation and Discrimination</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Brightness-Adaptation"><span class="nav-text">Brightness Adaptation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Brightness-Discrimination"><span class="nav-text">Brightness Discrimination</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#sample-1"><span class="nav-text">sample 1</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#sample-2"><span class="nav-text">sample 2</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -895,6 +887,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.4.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.4.2"></script>
+
+
 
   
 
@@ -917,6 +913,22 @@
 
 
 
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+  <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '542fe225d3af3e512076',
+          clientSecret: '6bc37740abe8eca340840532accbbdbdbfd1fe3d',
+          repo: 'nicetomeetu21.github.io',
+          owner: 'nicetomeetu21',
+          admin: ['nicetomeetu21'],
+          id: md5(window.location.pathname),
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')
+       </script>
 
 
 
@@ -1266,43 +1278,42 @@
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function () {
-        entries.push( $(this).attr("id").trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { "$in": entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function ({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for(var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if( countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', `/classes/Counter/${counter.objectId}`, JSON.stringify({ time: { "__op":"Increment", "amount":1 } }))
+            
+            .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(counter.time + 1);
+            })
+            
+            .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+            })
+          } else {
+            
+              Counter('post', '/classes/Counter', JSON.stringify({ title: title, url: url, time: 1}))
+                .done(function () {
+                  var $element = $(document.getElementById(url));
+                  $element.find('.leancloud-visitors-count').text(1);
+                })
+                .fail(function () {
+                  console.log('Failed to create');
+                });
+            
           }
         })
-        .fail(function ({ responseJSON }) {
-          console.log("LeanCloud Counter Error: " + responseJSON.code + " " + responseJSON.error);
-        });
+      .fail(function ({ responseJSON }) {
+        console.log('LeanCloud Counter Error:' + responseJSON.code + " " + responseJSON.error);
+      });
     }
     
 
@@ -1322,13 +1333,11 @@
             });
           };
           
-          if ($('.post-title-link').length >= 1) {
-            showTime(Counter);
-          }
+          addCount(Counter);
           
         })
     });
-  </script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+  </script>
 
 
 
@@ -1342,6 +1351,30 @@
   
   
 
+  
+    
+      <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      },
+      TeX: {equationNumbers: { autoNumber: "AMS" }}
+    });
+</script>
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+      var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+
+    
   
 
 
