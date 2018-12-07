@@ -124,7 +124,16 @@
 <meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.7.png">
 <meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.8.png">
 <meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.9.png">
-<meta property="og:updated_time" content="2018-12-06T14:30:54.317Z">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.10.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.12.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.13.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.14.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.15.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.16.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.18.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.19.png">
+<meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.20.png">
+<meta property="og:updated_time" content="2018-12-07T11:53:29.116Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Digital Image Processing (3rd Edition) [Gonzalez]》 第2章学习笔记">
 <meta name="twitter:description" content="2 Digital Image Fundamentals Those who wish to succeed must ask the right preliminary questions —— Aristotle   Preview本章的第一个目的是向你介绍数字图像处理中的一些基础概念，它们将在本书中沿用。  section 2.1：人类视觉系统的机理，包括人眼成像、光线适应性和辨别能力。 s">
@@ -389,12 +398,24 @@
                 
               
 
-              <time title="创建时间：2018-12-06 15:34:45 / 修改时间：22:30:54" itemprop="dateCreated datePublished" datetime="2018-12-06T15:34:45+08:00">2018-12-06</time>
+              <time title="创建时间：2018-12-06 15:34:45" itemprop="dateCreated datePublished" datetime="2018-12-06T15:34:45+08:00">2018-12-06</time>
             
 
             
               
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-12-07 19:53:29" itemprop="dateModified" datetime="2018-12-07T19:53:29+08:00">2018-12-07</time>
               
             
           </span>
@@ -491,14 +512,59 @@
 <h4 id="Brightness-Discrimination"><a href="#Brightness-Discrimination" class="headerlink" title="Brightness Discrimination"></a>Brightness Discrimination</h4><p>关于人眼在某一个特定适应等级下，对光强的变化的辨别能力，一个著名的实验：对象注视一个足够大的充满视野的均匀发光区，这个区域是典型的漫反射体，使用强度$I$的可变光源从后照射它。在其中心的小圆形范围内增加强度为$\Delta I$的闪光。</p>
 <p>如果$\Delta I$不够亮，对象说&quot;no&quot;，最终加到够亮对象会一直说&quot;yes&quot;。分量$\Delta I_c/I$被称为（<em>Weber ratio</em>）,其中$\Delta I_c$是背景为$I$时可辨别照明度增加量的$50\%$。$\Delta I_c/I$越小代表可辨别度越好。</p>
 <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.6.png">
-<p>图2.6显示，低照明度情况下辨别能力弱，但其随着背景光照增强而迅速增强。两条曲线反映出在低照明度下视觉主要由 <em>rods</em> 提供，而高等级下由 <em>cones</em>提供。</p>
-<p>如果背景光强度固定，且用其他光源代替闪光，将其强度从不能被觉察逐渐变化到始终被察觉，典型的观察者可以观察到24次不同的强度变化。粗略地看，这个结果和一个人一张单色图像的任意一点能观察到的不同灰度数量相关。但并不是说一张图象可以被表示为这么点灰度，因为当人眼扫图片时，平均背景发生了变化，故允许在新的适应等级上察觉到不同的强度增量集。最终结果是在整体灰度辩别上眼睛能适应更宽的范围。</p>
-<h4 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h4><p>这两个现象证明被感知的亮度不是简单的关于强度的函数。第一个现象基于一个事实，视觉系统倾向于在不同光强度的边界产生&quot;下冲&quot;或&quot;上冲&quot;现象，如图 2.6。这样带圆齿的带被称为 <em>Mach bands</em></p>
+<p>图 2.6 显示，低照明度情况下辨别能力弱，但其随着背景光照增强而迅速增强。两条曲线反映出在低照明度下视觉主要由 <em>rods</em> 提供，而高等级下由 <em>cones</em> 提供。</p>
+<p>如果背景光强度固定，且用其他光源代替闪光，将其强度从不能被觉察逐渐变化到始终被察觉，典型的观察者可以观察到 24 次不同的强度变化。粗略地看，这个结果和一个人一张单色图像的任意一点能观察到的不同灰度数量相关。但并不是说一张图象可以被表示为这么点灰度，因为当人眼扫图片时，平均背景发生了变化，故允许在新的适应等级上察觉到不同的强度增量集。最终结果是在整体灰度辩别上眼睛能适应更宽的范围。</p>
+<h4 id="summary"><a href="#summary" class="headerlink" title="summary"></a>summary</h4><p>这两个现象证明被感知的亮度不是简单的关于强度的函数。第一个现象基于一个事实，视觉系统倾向于在不同光强度的边界产生&quot;下冲&quot;或&quot;上冲&quot;现象，如图 2.7。这样带圆齿的带被称为 <em>Mach bands</em></p>
 <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.7.png">
 <p>第二个现象被称为 <em>simultaneous contrast</em> ，基于一个事实，一个区域可观察到的亮度不简单取决于其灰度，如图 2.8。</p>
 <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.8.png">
 <p>另一些人类感知现象是视觉错觉，眼睛填充了不存在的信息或错误地赶制了物体的几何特性，如图 2.9。</p>
 <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.9.png">
+<h2 id="2-2-Light-and-the-Electromagnetic-Spectrum"><a href="#2-2-Light-and-the-Electromagnetic-Spectrum" class="headerlink" title="2.2 Light and the Electromagnetic Spectrum"></a>2.2 Light and the Electromagnetic Spectrum</h2><p>这部分内容与中学相仿。</p>
+<img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.10.png">
+<p>没有颜色的光被称为 <em>monochromatic light</em>（单色光）或 <em>achromatic light</em>（无色光）。单色光唯一的属性是<em>intensity</em>（强度）或大小。由于单色光的强度反映在感知中是从黑色到灰色，最后变成白色的变化，故单色光的强度通常由 <em>gray level</em>（灰度）来表示。我们将在后续的讨论中交替使用术语 <em>intensity</em> 和 <em>gray level</em>。单色光由黑到白时强度测量值的范围被称为 <em>gray scale</em>，而单色图像通常被成为 <em>gray-scale images</em>。</p>
+<p><em>chromatic light</em>（有色光）跨越电磁波谱的大约 $0.43$ 到 $0.79 \mu m$。除了频率，还有三个基本量用来描述有色光的质量：<em>radiance</em>（发光强度），<em>luminance</em>（光通量），<em>brightness</em>（亮度）。<em>radiance</em> 是光源流出的总能量，通常用 <em>watts</em>（W,瓦特）表示。<em>luminance</em> 由 <em>lumens</em>（lm,流明数）度量，表示对象可感知到的光源发出的总能量。<em>brightness</em> 是一种光感知的主观的描述符，不能测量，它体现了光强度的无色概念，是描述色彩感知的重要因素之一。</p>
+<p>理论上，如果一个传感器能检测到某一段电测波谱发出的能量，我们就可以在这个波段上对感兴趣的事件成像。比较重要的一点要指出，若要使一段电磁波 &quot;看&quot; 到物体，其波长必须小于等于目标的尺寸。</p>
+<h2 id="2-3-Image-Sensing-and-Acquisition"><a href="#2-3-Image-Sensing-and-Acquisition" class="headerlink" title="2.3 Image Sensing and Acquisition"></a>2.3 Image Sensing and Acquisition</h2><p>我们感兴趣的多数图像是由一个 &quot;光源&quot; 和 被成像的 &quot;场景&quot;（其具有吸收或反射光源能量的元素）组成。加引号是因为其不一定是每天常见的光源和场景，就比如X光照片。</p>
+ <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.12.png">
+<p>图像传感器原理很简单：入射光通过特定感知材料与输入的电能相结合，转换成电压。输出的电压波形即传感器的响应，而通过把每个传感器的响应数字化，可得到一个数字量，图像数字化将留到 2.4 节讨论。</p>
+<h3 id="2-3-1-Image-Acquisition-Using-a-Single-Sensor"><a href="#2-3-1-Image-Acquisition-Using-a-Single-Sensor" class="headerlink" title="2.3.1 Image Acquisition Using a Single Sensor"></a>2.3.1 Image Acquisition Using a Single Sensor</h3><p>图 2.12(a) 即单个传感器的组件。最常见的这种传感器是光电二极管，其由硅材料制成，输出的电压波形与光强成正比。在传感器的前面使用一个过滤器和提高其光线选择性。</p>
+<p>若用这种传感器绘制 2D 图片，就需要给其分别提供在绘制区域上 x 和 y 方向的位移。图 2.13 显示了一个用于高精度扫描的配置。由于机械运动可控精度高，这种廉价而慢速的方法可以得到高精度的图像。另一种配置是在一个平面上，传感器在两个方向上线形移动。这些机械数字化仪有时被称为 <em>microdensitometers</em>（微密度计）。</p>
+ <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.13.png">
+<h3 id="2-3-2-Image-Acquisition-Using-Sensor-Strips"><a href="#2-3-2-Image-Acquisition-Using-Sensor-Strips" class="headerlink" title="2.3.2 Image Acquisition Using Sensor Strips"></a>2.3.2 Image Acquisition Using Sensor Strips</h3><p>将传感器排成一维直线后组成传感器带，这类几何结构比单个传感器使用更加频繁，如图 2.12(b)。该传感器带在一个方向上提供成像单元，在另一个方向上垂直于传感器带移动而成像，如图 2.14(a)。</p>
+<p>以圆环形方式安装的传感器带用于医学和工业成像，以得到 3D 物体的横截面图，如图 2.14(b)。需要注意的是，这类传感器的输出必须通过重构算法以获得有意义的横截面图像，换句话说图像不能直接由传感器获取。</p>
+ <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.14.png">
+<h3 id="2-3-3-Image-Acquisition-Using-Sensor-Arrays"><a href="#2-3-3-Image-Acquisition-Using-Sensor-Arrays" class="headerlink" title="2.3.3 Image Acquisition Using Sensor Arrays"></a>2.3.3 Image Acquisition Using Sensor Arrays</h3><p>图 2.12(c) 显示了单独的传感器构成了 2D 的传感器阵列。大量电磁波和超声波装置使用这种构造。这也同样是数字摄像机的主要构造方式。这类传感器的主要用法如图 2.15。</p>
+ <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.15.png">
+<h3 id="2-3-4-A-Simple-Image-Formation-Model"><a href="#2-3-4-A-Simple-Image-Formation-Model" class="headerlink" title="2.3.4 A Simple Image Formation Model"></a>2.3.4 A Simple Image Formation Model</h3><p>在章节 1.1 中，我们定义了一张图片为形如 $f(x,y)$ 的二元方程。在 $(x,y)$ 处的 $f$ 的值是一个正标量，其物理意义由图片源决定。当一张图片由物理过程产生时，其亮度正比于光源射出的能量，因此，$f(x,y)$ 一定非零值，并且有限：$0&lt;f(x,y)&lt;\infty$。</p>
+<p>方程 $f(x,y)$ 可以由两部分组成：</p>
+<ul>
+<li><em>illumination</em>（反射分量）：入射到场景内的光源照射量，记为 $i(x,y)$，其性质取决于光源。</li>
+<li><em>reflectance</em>（入射分量）：被物体反射的光照量，记为$r(x,y)$，其性质取决于成像物体。</li>
+</ul>
+<p>$$f(x,y)=i(x,y)r(x,y), 0&lt;i(x,y)&lt;\infty , 0&lt;r(x,y)&lt;1$$</p>
+<p>这些表达式也同样适用于入射光通过介质成像（胸透X射线），此时用 <em>transmissivity</em> 替代 <em>reflectance</em>。</p>
+<p>设一张单色图的某一点 $(x_0,y_0)$ 的灰度为 $\ell = f(x_0,y_0)$，且$L_{min} \le \ell \le L_{max}$。理论上唯一的要求即 $L_{min}$ 是正数，$L_{max}$ 有限。事实上，$L_{min}=i_{min}r_{min}, L_{max}=i_{max}r_{max}$。区间 $[L_{min},L_{max}]$ 即 <em>gray scale</em>。常见情况是将区间在数字上平移至$[0,L-1]$，$\ell = 0$ 代表黑色，$\ell = L-1$ 代表白色。</p>
+<h2 id="2-4-Image-Sampling-and-Quantization"><a href="#2-4-Image-Sampling-and-Quantization" class="headerlink" title="2.4 Image Sampling and Quantization"></a>2.4 Image Sampling and Quantization</h2><p>在上一节的讨论中，我们见到了很多种获得图片的方式，不过我们目标都相同：在感知的数据上产生图片。大多数传感器产生的输出都是连续的电压波形，其振幅与空间特性与感知到的物理特点相关。为了产生数字图像，我们需要将这些连续的感知数据转换至数字形式，这包含两个过程：<em>sampling</em>（采样），<em>quantization</em>（量化）。</p>
+<h3 id="2-4-1-Basic-Concepts-in-Sampling-and-Quantization"><a href="#2-4-1-Basic-Concepts-in-Sampling-and-Quantization" class="headerlink" title="2.4.1 Basic Concepts in Sampling and Quantization"></a>2.4.1 Basic Concepts in Sampling and Quantization</h3><p>采样与量化的基本思想如图 2.16。一张图像可能在 x 轴和 y 轴以及振幅上都是连续的。为了将其转化成数字形式，我们需要在其坐标和振幅上分别进行采样，对坐标进行数字化被称为 <em>sampling</em>，对振幅数字化被称为 <em>quantization</em>。</p>
+ <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.16.png">
+<p>图2.16(c)中白色方块即为对坐标等间隔采样结果，2.16(d)即对振幅量化后的最终数字样本。图中亦可知，量化能达到得精度除了与使用的离散等级得数量相关，也与样本信号得噪声高度相关。</p>
+<p>上述采样过程假设了我们有一张在坐标和振幅上都连续的图片，实际上，采样方式由产生图片的传感器的组成决定。当使用单个传感器产生图片时，采样可采用上述过程，具体方式即通过机械位移来使传感器到指定位置采集数据。由于机械运动的高精度，使用这种方式采样可以到达的精度几乎没有限制，但实际上还有其他的干扰因素，比如系统光学原件的数量。</p>
+<p>当我们使用 <em>sensing strip</em> 来获得图片，传感器的数目将成为采样精度的限制，虽然我们可以通过机械控制来增加一个方向的精度，但只增加某个方向的精度意义不大。当使用 <em>sensing array</em> 来获得图片时，传感器的个数将成为两个方向的精度限制。</p>
+<h3 id="2-4-2-Representing-Digital-Images"><a href="#2-4-2-Representing-Digital-Images" class="headerlink" title="2.4.2 Representing Digital Images"></a>2.4.2 Representing Digital Images</h3><p>假设我们将一张连续图片采样为二维数组 $f(x,y)$，包含 $M$ 行 $N$ 列，为了简便起见，我们使用这些值作为离散坐标：$x=0,1,2,...,M-1$和$y=0,1,2,...,N-1$，即 0-based。这里的坐标并不代表被采样的图片上的物理坐标系，由一张图像的坐标张成的实平面被称为 <em>spatial domain</em>，而 x,y 被称为 <em>spatial variables</em> 或 <em>spatial coordinates</em>。</p>
+ <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.18.png">
+<p>图 2.18 显示了 3 种基本的显示 f(x,y) 的方法。由于复杂图像包含细节过多，很难用图 2.18(a) 来分析，但处理元素为 (x,y,z)三元组时，这种表示还是很有用。通常图 2.18(b) 和图 2.18(c) 更有用。图 2.18(b) 是一个比较一般的表示方法，而图 2.18(c) 是一个矩阵形式，但由于图片大小的关系，通常很难完全打印。</p>
+<p>在公式形式上，我们用 $M*N的数值阵列表示，或是以传统矩阵 A$ 表示。矩阵中的每一个元素被称为 <em>image element</em>, <em>picture element</em>, <em>pixel</em> 或 <em>pel</em>。<br>$$<br>f(x,y)=<br> \begin{pmatrix}<br>   f(0,0) &amp; f(0,1) &amp; \cdots &amp; f(0,N-1) \\<br>   f(1,0) &amp; f(1,1) &amp; \cdots &amp; f(1,N-1) \\<br>   \vdots &amp; \vdots &amp; &amp; \vdots \\<br>   f(M-1,0) &amp; f(M-1, 1) &amp; \cdots &amp; f(M-1, N-1)<br>  \end{pmatrix}<br>  = A = \begin{pmatrix}<br>   a_{0,0} &amp; a_{0,1} &amp; \cdots &amp; a_{0,N-1} \\<br>   a_{1,0} &amp; a_{1,1} &amp; \cdots &amp; a_{1,N-1} \\<br>   \vdots &amp; \vdots &amp; &amp; \vdots \\<br>   a_{M-1,0} &amp; a_{M-1, 1} &amp; \cdots &amp; a_{M-1, N-1}<br>  \end{pmatrix}<br>$$</p>
+<p>简要回顾图 2.18，注意数字图像的原点在左上方，x 轴正方向向下，y 轴正方向下右。这种方便的表示法基于一个事实：很多图片显示装置（TV显示器）扫一张图片时是从左上角开始，从左向右扫的。更重要的事实是按照惯例，矩阵的第一个元素在左上角。</p>
+<p>数字化过程需要对 M,N 和 L（离散灰度等级）的取值做出决定。除了必须是正整数，对 M,N 没有更多的限制。然而， 由于对存储容量和量化硬件的考虑，灰度等级通常是 2 的幂：L = 2^k。我们假设离散灰度是等间隔的，它们是处于[0,L-1]中的整数。有时候，<em>gray scale</em> 所跨越的值域被非正式德成为 <em>dynamic range</em>。这一术语在不同领域有不同的用法。在这里，我们定义一个图像系统的 <em>dynamic range</em> 为最大可测量灰度和最小可测量灰度的比值。一般来说其上限取决于<em>saturation</em>（饱和度），下限取决于<em>noise</em>（噪声），如图 2.19。</p>
+ <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.19.png">
+<p>基本上，动态范围确立了系统能表示的最高和最低灰度，这也同样是图片能具有的。与之紧密相关的一个概念是 <em>image contrast</em>（图像对比度），我们定义它为一张图片最高和最低灰度之差。当一张图片中大量像素具有高动态范围时，我们可以预料图片具有高对比度。我们等第3章再讨论这些细节。</p>
+<p>存储一张数字图像需要字节为：$b=M*N*k$。当一张图片有$2^k$个灰度等级时，常见的称法是<em>k-bit image</em>。</p>
+<h3 id="2-4-3-Spatial-and-Intensity-Resolution"><a href="#2-4-3-Spatial-and-Intensity-Resolution" class="headerlink" title="2.4.3 Spatial and Intensity Resolution"></a>2.4.3 Spatial and Intensity Resolution</h3><p>直觉上，<em>spatial resolution</em> 是一张图片中最小可辩别细节的一种度量。在量化上，<em>spatial resolution</em> 可以被表示成好几种方法，其中 <em>line pairs per unit distance</em> 和 <em>dots(pixels) per unit distance</em> 最常用。假设我们用黑白相间的直线带建立一个图，每一条宽 $W units$ ，因此一个 <em>line pair</em> 的宽度为 $2W$， <em>spatial resolution</em> 为 $1/2W$<em>line pairs per unit distance</em>。一个广泛使用的图像分辨率的定义是可分辨的 <em>line pairs per unit distance</em> 的最大数量。在美国，这个测量法通常被表示为 <em>dots per inc</em> (dpi)。空间分辨率的度量必须相对于空间单位来规定才有意义。</p>
+<p><em>intensity resolution</em> 类似定义为灰度等级上的最小可分辨区别。其通常由硬件决定，一般是 2 的幂。不同于 <em>spatial resolution</em> 必须基于单位距离基础才有意义，常见的做法是将量化灰度需要的字节数视为 <em>intensity resolution</em>，因为可分辨的区别不止受 <em>noise</em> 和 <em>saturation</em> 值影响，还与人类的感知能力相关。</p>
+<h4 id="EXAMPLE-2-2-Illustration-of-the-effects-of-reducing-image-spatial-resolution"><a href="#EXAMPLE-2-2-Illustration-of-the-effects-of-reducing-image-spatial-resolution" class="headerlink" title="EXAMPLE 2.2: Illustration of the effects of reducing image spatial resolution."></a>EXAMPLE 2.2: Illustration of the effects of reducing image spatial resolution.</h4><p>图 2.20 是减少空间分辨率的效果图。自然，降低分辨率的图要小于原图，为了便于比较，将所有小图全部拉伸至原图（使用 2.4.4 节中的拉伸法）。</p>
+ <img src="/2018/12/06/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.20.png">
+<h4 id="EXAMPLE-2-3-Typical-effects-of-varying-the-number-of-intensity-levels-in-a-digital-image"><a href="#EXAMPLE-2-3-Typical-effects-of-varying-the-number-of-intensity-levels-in-a-digital-image" class="headerlink" title="EXAMPLE 2.3: Typical effects of varying the number of intensity levels in a digital image."></a>EXAMPLE 2.3: Typical effects of varying the number of intensity levels in a digital image.</h4>
       
     </div>
 
@@ -749,7 +815,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Digital-Image-Fundamentals"><span class="nav-text">2 Digital Image Fundamentals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Preview"><span class="nav-text">Preview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Elements-of-Visual-Perception"><span class="nav-text">2.1 Elements of Visual Perception</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-Structure-of-the-Human-Eye"><span class="nav-text">2.1.1 Structure of the Human Eye</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-Image-Formation-in-the-Eye"><span class="nav-text">2.1.2 Image Formation in the Eye</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-Brightness-Adaptation-and-Discrimination"><span class="nav-text">2.1.3 Brightness Adaptation and Discrimination</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Brightness-Adaptation"><span class="nav-text">Brightness Adaptation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Brightness-Discrimination"><span class="nav-text">Brightness Discrimination</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#summary"><span class="nav-text">summary</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#2-Digital-Image-Fundamentals"><span class="nav-text">2 Digital Image Fundamentals</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Preview"><span class="nav-text">Preview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-Elements-of-Visual-Perception"><span class="nav-text">2.1 Elements of Visual Perception</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-1-Structure-of-the-Human-Eye"><span class="nav-text">2.1.1 Structure of the Human Eye</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-2-Image-Formation-in-the-Eye"><span class="nav-text">2.1.2 Image Formation in the Eye</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-3-Brightness-Adaptation-and-Discrimination"><span class="nav-text">2.1.3 Brightness Adaptation and Discrimination</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Brightness-Adaptation"><span class="nav-text">Brightness Adaptation</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Brightness-Discrimination"><span class="nav-text">Brightness Discrimination</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#summary"><span class="nav-text">summary</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-Light-and-the-Electromagnetic-Spectrum"><span class="nav-text">2.2 Light and the Electromagnetic Spectrum</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-Image-Sensing-and-Acquisition"><span class="nav-text">2.3 Image Sensing and Acquisition</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-1-Image-Acquisition-Using-a-Single-Sensor"><span class="nav-text">2.3.1 Image Acquisition Using a Single Sensor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-2-Image-Acquisition-Using-Sensor-Strips"><span class="nav-text">2.3.2 Image Acquisition Using Sensor Strips</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-3-Image-Acquisition-Using-Sensor-Arrays"><span class="nav-text">2.3.3 Image Acquisition Using Sensor Arrays</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-3-4-A-Simple-Image-Formation-Model"><span class="nav-text">2.3.4 A Simple Image Formation Model</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-Image-Sampling-and-Quantization"><span class="nav-text">2.4 Image Sampling and Quantization</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-1-Basic-Concepts-in-Sampling-and-Quantization"><span class="nav-text">2.4.1 Basic Concepts in Sampling and Quantization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-2-Representing-Digital-Images"><span class="nav-text">2.4.2 Representing Digital Images</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-3-Spatial-and-Intensity-Resolution"><span class="nav-text">2.4.3 Spatial and Intensity Resolution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#EXAMPLE-2-2-Illustration-of-the-effects-of-reducing-image-spatial-resolution"><span class="nav-text">EXAMPLE 2.2: Illustration of the effects of reducing image spatial resolution.</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#EXAMPLE-2-3-Typical-effects-of-varying-the-number-of-intensity-levels-in-a-digital-image"><span class="nav-text">EXAMPLE 2.3: Typical effects of varying the number of intensity levels in a digital image.</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
