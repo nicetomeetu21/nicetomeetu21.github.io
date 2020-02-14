@@ -109,13 +109,13 @@
 
 
 
-  <meta name="description" content="2 Digital Image Fundamentals Those who wish to succeed must ask the right preliminary questions —— Aristotle   Preview本章的第一个目的是向你介绍数字图像处理中的一些基础概念，它们将在本书中沿用。  section 2.1：人类视觉系统的机理，包括人眼成像、光线适应性和辨别能力。 s">
+  <meta name="description" content="2 Digital Image Fundamentals Those who wish to succeed must ask the right preliminary questions —— Aristotle">
 <meta name="keywords" content="学习笔记,《Digital Image Processing [Gonzalez]》">
 <meta property="og:type" content="article">
 <meta property="og:title" content="《Digital Image Processing [Gonzalez]》 第2章 学习笔记">
 <meta property="og:url" content="https://nicetomeetu21.github.io/2018/12/06/Image Processing/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/index.html">
 <meta property="og:site_name" content="nicetomeetu">
-<meta property="og:description" content="2 Digital Image Fundamentals Those who wish to succeed must ask the right preliminary questions —— Aristotle   Preview本章的第一个目的是向你介绍数字图像处理中的一些基础概念，它们将在本书中沿用。  section 2.1：人类视觉系统的机理，包括人眼成像、光线适应性和辨别能力。 s">
+<meta property="og:description" content="2 Digital Image Fundamentals Those who wish to succeed must ask the right preliminary questions —— Aristotle">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/Image%20Processing/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.1.png">
 <meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/Image%20Processing/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.2.png">
@@ -135,10 +135,10 @@
 <meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/Image%20Processing/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.21.png">
 <meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/Image%20Processing/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.22.png">
 <meta property="og:image" content="https://nicetomeetu21.github.io/2018/12/06/Image%20Processing/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.25.png">
-<meta property="og:updated_time" content="2020-01-21T14:00:23.852Z">
+<meta property="og:updated_time" content="2020-02-13T09:22:10.002Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="《Digital Image Processing [Gonzalez]》 第2章 学习笔记">
-<meta name="twitter:description" content="2 Digital Image Fundamentals Those who wish to succeed must ask the right preliminary questions —— Aristotle   Preview本章的第一个目的是向你介绍数字图像处理中的一些基础概念，它们将在本书中沿用。  section 2.1：人类视觉系统的机理，包括人眼成像、光线适应性和辨别能力。 s">
+<meta name="twitter:description" content="2 Digital Image Fundamentals Those who wish to succeed must ask the right preliminary questions —— Aristotle">
 <meta name="twitter:image" content="https://nicetomeetu21.github.io/2018/12/06/Image%20Processing/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.1.png">
 
 
@@ -415,7 +415,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2020-01-21 22:00:23" itemprop="dateModified" datetime="2020-01-21T22:00:23+08:00">2020-01-21</time>
+                <time title="修改时间：2020-02-13 17:22:10" itemprop="dateModified" datetime="2020-02-13T17:22:10+08:00">2020-02-13</time>
               
             
           </span>
@@ -480,6 +480,7 @@
         <h1 id="2-Digital-Image-Fundamentals"><a href="#2-Digital-Image-Fundamentals" class="headerlink" title="2 Digital Image Fundamentals"></a>2 Digital Image Fundamentals</h1><blockquote>
 <p>Those who wish to succeed must ask the right preliminary questions —— Aristotle </p>
 </blockquote>
+<a id="more"></a>
 <h2 id="Preview"><a href="#Preview" class="headerlink" title="Preview"></a>Preview</h2><p>本章的第一个目的是向你介绍数字图像处理中的一些基础概念，它们将在本书中沿用。</p>
 <ul>
 <li><em>section 2.1</em>：人类视觉系统的机理，包括人眼成像、光线适应性和辨别能力。</li>
@@ -490,7 +491,6 @@
 <li><em>section 2.6</em>：介绍本书中主要使用的数学工具。</li>
 </ul>
 <p>第二个目的是帮助你建立一种 &quot;感觉&quot;，其关于如何使用这些工具去完成各种各样的基础图像处理任务。工具的范围和用法亦将随后文而扩展。</p>
-<a id="more"></a>
 <h2 id="2-1-Elements-of-Visual-Perception"><a href="#2-1-Elements-of-Visual-Perception" class="headerlink" title="2.1 Elements of Visual Perception"></a>2.1 Elements of Visual Perception</h2><p>虽然数字图像处理是建立在数学和概率公式的基础上，但选择合适的技术仍需要人的直觉和分析，而这些选择通常基于主观的视觉判断上。所以本书选择从建立一个对人类视觉感知的基础的理解开始。</p>
 <p>由于篇幅有限不可能讲太细。我们的兴趣主要集中在与人类生成图像并感知相关的机理和参数，以及通过一些因素来学习人类视觉的物理限制，它们也同样用于数字图像的处理。</p>
 <h3 id="2-1-1-Structure-of-the-Human-Eye"><a href="#2-1-1-Structure-of-the-Human-Eye" class="headerlink" title="2.1.1 Structure of the Human Eye"></a>2.1.1 Structure of the Human Eye</h3><img src="/2018/12/06/Image%20Processing/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/FIGURE-2.1.png">
@@ -708,7 +708,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">10</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
