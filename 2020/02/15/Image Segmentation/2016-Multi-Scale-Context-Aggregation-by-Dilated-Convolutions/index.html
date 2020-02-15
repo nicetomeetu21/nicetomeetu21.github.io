@@ -109,17 +109,18 @@
 
 
 
-  <meta name="description" content="去年电脑挂掉后就没管博客了，现在终于重新部署好了，继续不定期更新吧。 记录些看论文和看书的笔记。">
+  <meta name="description" content="Multi-Scale Context Aggregation by Dilated ConvolutionsResearch ObjectiveThe goal is to compute a discrete or continuous label for each pixel in the image。 Semantic segmentation, which calls for class">
+<meta name="keywords" content="Paper Note,ICLR 2016">
 <meta property="og:type" content="article">
-<meta property="og:title" content="restart">
-<meta property="og:url" content="https://nicetomeetu21.github.io/2020/01/21/test/index.html">
+<meta property="og:title" content="Multi-Scale Context Aggregation by Dilated Convolutions">
+<meta property="og:url" content="https://nicetomeetu21.github.io/2020/02/15/Image Segmentation/2016-Multi-Scale-Context-Aggregation-by-Dilated-Convolutions/index.html">
 <meta property="og:site_name" content="nicetomeetu">
-<meta property="og:description" content="去年电脑挂掉后就没管博客了，现在终于重新部署好了，继续不定期更新吧。 记录些看论文和看书的笔记。">
+<meta property="og:description" content="Multi-Scale Context Aggregation by Dilated ConvolutionsResearch ObjectiveThe goal is to compute a discrete or continuous label for each pixel in the image。 Semantic segmentation, which calls for class">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2020-01-21T14:06:11.834Z">
+<meta property="og:updated_time" content="2020-02-15T07:09:33.999Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="restart">
-<meta name="twitter:description" content="去年电脑挂掉后就没管博客了，现在终于重新部署好了，继续不定期更新吧。 记录些看论文和看书的笔记。">
+<meta name="twitter:title" content="Multi-Scale Context Aggregation by Dilated Convolutions">
+<meta name="twitter:description" content="Multi-Scale Context Aggregation by Dilated ConvolutionsResearch ObjectiveThe goal is to compute a discrete or continuous label for each pixel in the image。 Semantic segmentation, which calls for class">
 
 
 
@@ -128,7 +129,7 @@
 
 
 
-  <link rel="canonical" href="https://nicetomeetu21.github.io/2020/01/21/test/">
+  <link rel="canonical" href="https://nicetomeetu21.github.io/2020/02/15/Image Segmentation/2016-Multi-Scale-Context-Aggregation-by-Dilated-Convolutions/">
 
 
 
@@ -138,7 +139,7 @@
   };
 </script>
 
-  <title>restart | nicetomeetu</title>
+  <title>Multi-Scale Context Aggregation by Dilated Convolutions | nicetomeetu</title>
   
 
 
@@ -336,7 +337,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://nicetomeetu21.github.io/2020/01/21/test/">
+    <link itemprop="mainEntityOfPage" href="https://nicetomeetu21.github.io/2020/02/15/Image Segmentation/2016-Multi-Scale-Context-Aggregation-by-Dilated-Convolutions/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="hk">
@@ -353,7 +354,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">restart
+          <h1 class="post-title" itemprop="name headline">Multi-Scale Context Aggregation by Dilated Convolutions
               
             
           </h1>
@@ -378,7 +379,7 @@
                 
               
 
-              <time title="创建时间：2020-01-21 21:06:13 / 修改时间：22:06:11" itemprop="dateCreated datePublished" datetime="2020-01-21T21:06:13+08:00">2020-01-21</time>
+              <time title="创建时间：2020-02-15 14:04:02 / 修改时间：15:09:33" itemprop="dateCreated datePublished" datetime="2020-02-15T14:04:02+08:00">2020-02-15</time>
             
 
             
@@ -400,7 +401,7 @@
                 <span class="post-meta-item-text">分类于</span>
               
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/informal-essay/" itemprop="url" rel="index"><span itemprop="name">informal essay</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Image-Segmentation/" itemprop="url" rel="index"><span itemprop="name">Image Segmentation</span></a></span>
 
                 
                 
@@ -414,7 +415,7 @@
 
           
           
-             <span id="/2020/01/21/test/" class="leancloud_visitors" data-flag-title="restart">
+             <span id="/2020/02/15/Image Segmentation/2016-Multi-Scale-Context-Aggregation-by-Dilated-Convolutions/" class="leancloud_visitors" data-flag-title="Multi-Scale Context Aggregation by Dilated Convolutions">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -445,8 +446,22 @@
       
 
       
-        <p>去年电脑挂掉后就没管博客了，现在终于重新部署好了，继续不定期更新吧。</p>
-<p>记录些看论文和看书的笔记。</p>
+        <h1 id="Multi-Scale-Context-Aggregation-by-Dilated-Convolutions"><a href="#Multi-Scale-Context-Aggregation-by-Dilated-Convolutions" class="headerlink" title="Multi-Scale Context Aggregation by Dilated Convolutions"></a>Multi-Scale Context Aggregation by Dilated Convolutions</h1><h2 id="Research-Objective"><a href="#Research-Objective" class="headerlink" title="Research Objective"></a>Research Objective</h2><p>The goal is to compute a discrete or continuous label for each pixel in the image。</p>
+<p>Semantic segmentation, which calls for classifying each pixel into one of a given set of categories。</p>
+<h2 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h2><p>Former convolutional network architectures purposed for dense prediction were originally been developed for image classification. </p>
+<p>Therefore, it would be worth exploring  about which aspects of the repurposed networks are truly necessary and which reduce accuracy when operated densely. </p>
+<p>And we need modules designed specifically for dense prediction to improve accuracy further.</p>
+<h2 id="Method-s"><a href="#Method-s" class="headerlink" title="Method(s)"></a>Method(s)</h2><h3 id="dilated-convolution"><a href="#dilated-convolution" class="headerlink" title="dilated convolution"></a>dilated convolution</h3><p>Let $F$ be a image and $k$ be a convolution filter, $l$-dilated convolution can be formed as<br>$$<br>(F*<em>lk)(p)=\sum</em>{s+lt=p}F(s)k(t)<br>$$</p>
+<h4 id="Characteristic"><a href="#Characteristic" class="headerlink" title="Characteristic"></a>Characteristic</h4><p>dilated convolutions support exponentially expanding receptive fields without losing resolution or coverage.</p>
+<p>Considerapplying $3\times3$ filters with exponentially increasing dilation:<br>$$<br>F_{i+1}=F_i*_{2^i}k_i<br>$$<br>It is easy to see that the size of the receptive field of each element in $F_{i+1}$ is $(2^{i+2}-1)\times(2^{i+2}-1)$</p>
+
+<h3 id="multi-scale-context-aggregation-module"><a href="#multi-scale-context-aggregation-module" class="headerlink" title="multi-scale context aggregation module"></a>multi-scale context aggregation module</h3><p>The module takes $C$ feature maps as input and produces $C$ feature maps as output. The input and output have the same form, thus the module can be plugged into existing dense prediction architectures.</p>
+<p>The basic context module has $7$ layers that apply $3\times3$ convolutions with different dilation factors. The dilations are $1, 1, 2, 4, 8, 16,$ and $1$. Each of these convolutions is followed by a pointwise truncation $max(\cdot; 0)$. A final layer performs $1\times1\times C$ convolutions and produces the output of the module.</p>
+
+<p>Note that the frontend module that provides the input to the context network in our experiments produces feature maps at $64\times64$ resolution. We therefore stop the exponential expansion of the receptive field after layer 6.</p>
+<h3 id="identity-initialization"><a href="#identity-initialization" class="headerlink" title="identity initialization"></a>identity initialization</h3><p>Authors found that random initialization schemes were not effective for the context module. A form of identity initialization was used:<br>$$<br>k^b(t,a)=1_{[t=0]}1_{[a=b]}<br>$$<br>This initialization sets all filters such that each layer simply passes the input directly to the next.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>the dilated convolution operator is particularly suited to dense prediction due to its ability to expand the receptive field without losing resolution or coverage.</p>
+<p>the accuracy of existing convolutional networks for semantic segmentation can be increased by removing vestigial components that had been developed for image classification</p>
 
       
     </div>
@@ -465,6 +480,14 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/Paper-Note/" rel="tag"><i class="fa fa-tag"></i> Paper Note</a>
+          
+            <a href="/tags/ICLR-2016/" rel="tag"><i class="fa fa-tag"></i> ICLR 2016</a>
+          
+        </div>
+      
 
       
       
@@ -474,8 +497,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/06/Image Processing/《Digital-Image-Processing-3rd-Edition-Gonzalez-》-第2章学习笔记/" rel="next" title="《Digital Image Processing [Gonzalez]》 第2章 学习笔记">
-                <i class="fa fa-chevron-left"></i> 《Digital Image Processing [Gonzalez]》 第2章 学习笔记
+              <a href="/2020/02/13/Image Processing/《Digital-Image-Processing-Gonzalez-》-第3章-学习笔记/" rel="next" title="《Digital Image Processing [Gonzalez]》 第3章 学习笔记">
+                <i class="fa fa-chevron-left"></i> 《Digital Image Processing [Gonzalez]》 第3章 学习笔记
               </a>
             
           </div>
@@ -483,10 +506,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2020/02/13/Image Processing/《Digital-Image-Processing-Gonzalez-》-第3章-学习笔记/" rel="prev" title="《Digital Image Processing [Gonzalez]》 第3章 学习笔记">
-                《Digital Image Processing [Gonzalez]》 第3章 学习笔记 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -534,8 +553,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -571,6 +599,8 @@
                     
                       
                     
+                      
+                    
                     <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
@@ -592,7 +622,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -675,6 +709,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Multi-Scale-Context-Aggregation-by-Dilated-Convolutions"><span class="nav-text">Multi-Scale Context Aggregation by Dilated Convolutions</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Research-Objective"><span class="nav-text">Research Objective</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Problem-Statement"><span class="nav-text">Problem Statement</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Method-s"><span class="nav-text">Method(s)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#dilated-convolution"><span class="nav-text">dilated convolution</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Characteristic"><span class="nav-text">Characteristic</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#multi-scale-context-aggregation-module"><span class="nav-text">multi-scale context aggregation module</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#identity-initialization"><span class="nav-text">identity initialization</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-text">Conclusion</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

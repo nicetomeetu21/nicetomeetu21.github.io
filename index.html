@@ -336,6 +336,190 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://nicetomeetu21.github.io/2020/02/15/Image Segmentation/2016-Multi-Scale-Context-Aggregation-by-Dilated-Convolutions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="hk">
+      <meta itemprop="description" content="逢山开路，遇水架桥。">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="nicetomeetu">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/02/15/Image Segmentation/2016-Multi-Scale-Context-Aggregation-by-Dilated-Convolutions/" itemprop="url">
+                  Multi-Scale Context Aggregation by Dilated Convolutions
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-02-15 14:04:02 / 修改时间：15:09:33" itemprop="dateCreated datePublished" datetime="2020-02-15T14:04:02+08:00">2020-02-15</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Image-Segmentation/" itemprop="url" rel="index"><span itemprop="name">Image Segmentation</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2020/02/15/Image Segmentation/2016-Multi-Scale-Context-Aggregation-by-Dilated-Convolutions/" class="leancloud_visitors" data-flag-title="Multi-Scale Context Aggregation by Dilated Convolutions">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数：</span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Multi-Scale-Context-Aggregation-by-Dilated-Convolutions"><a href="#Multi-Scale-Context-Aggregation-by-Dilated-Convolutions" class="headerlink" title="Multi-Scale Context Aggregation by Dilated Convolutions"></a>Multi-Scale Context Aggregation by Dilated Convolutions</h1><h2 id="Research-Objective"><a href="#Research-Objective" class="headerlink" title="Research Objective"></a>Research Objective</h2><p>The goal is to compute a discrete or continuous label for each pixel in the image。</p>
+<p>Semantic segmentation, which calls for classifying each pixel into one of a given set of categories。</p>
+<h2 id="Problem-Statement"><a href="#Problem-Statement" class="headerlink" title="Problem Statement"></a>Problem Statement</h2><p>Former convolutional network architectures purposed for dense prediction were originally been developed for image classification. </p>
+<p>Therefore, it would be worth exploring  about which aspects of the repurposed networks are truly necessary and which reduce accuracy when operated densely. </p>
+<p>And we need modules designed specifically for dense prediction to improve accuracy further.</p>
+<h2 id="Method-s"><a href="#Method-s" class="headerlink" title="Method(s)"></a>Method(s)</h2><h3 id="dilated-convolution"><a href="#dilated-convolution" class="headerlink" title="dilated convolution"></a>dilated convolution</h3><p>Let $F$ be a image and $k$ be a convolution filter, $l$-dilated convolution can be formed as<br>$$<br>(F*<em>lk)(p)=\sum</em>{s+lt=p}F(s)k(t)<br>$$</p>
+<h4 id="Characteristic"><a href="#Characteristic" class="headerlink" title="Characteristic"></a>Characteristic</h4><p>dilated convolutions support exponentially expanding receptive fields without losing resolution or coverage.</p>
+<p>Considerapplying $3\times3$ filters with exponentially increasing dilation:<br>$$<br>F_{i+1}=F_i*_{2^i}k_i<br>$$<br>It is easy to see that the size of the receptive field of each element in $F_{i+1}$ is $(2^{i+2}-1)\times(2^{i+2}-1)$</p>
+
+<h3 id="multi-scale-context-aggregation-module"><a href="#multi-scale-context-aggregation-module" class="headerlink" title="multi-scale context aggregation module"></a>multi-scale context aggregation module</h3><p>The module takes $C$ feature maps as input and produces $C$ feature maps as output. The input and output have the same form, thus the module can be plugged into existing dense prediction architectures.</p>
+<p>The basic context module has $7$ layers that apply $3\times3$ convolutions with different dilation factors. The dilations are $1, 1, 2, 4, 8, 16,$ and $1$. Each of these convolutions is followed by a pointwise truncation $max(\cdot; 0)$. A final layer performs $1\times1\times C$ convolutions and produces the output of the module.</p>
+
+<p>Note that the frontend module that provides the input to the context network in our experiments produces feature maps at $64\times64$ resolution. We therefore stop the exponential expansion of the receptive field after layer 6.</p>
+<h3 id="identity-initialization"><a href="#identity-initialization" class="headerlink" title="identity initialization"></a>identity initialization</h3><p>Authors found that random initialization schemes were not effective for the context module. A form of identity initialization was used:<br>$$<br>k^b(t,a)=1_{[t=0]}1_{[a=b]}<br>$$<br>This initialization sets all filters such that each layer simply passes the input directly to the next.</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>the dilated convolution operator is particularly suited to dense prediction due to its ability to expand the receptive field without losing resolution or coverage.</p>
+<p>the accuracy of existing convolutional networks for semantic segmentation can be increased by removing vestigial components that had been developed for image classification</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://nicetomeetu21.github.io/2020/02/13/Image Processing/《Digital-Image-Processing-Gonzalez-》-第3章-学习笔记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -472,176 +656,6 @@
             </a>
           </div>
           <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://nicetomeetu21.github.io/2020/01/21/test/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="hk">
-      <meta itemprop="description" content="逢山开路，遇水架桥。">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="nicetomeetu">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/01/21/test/" itemprop="url">
-                  restart
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2020-01-21 21:06:13 / 修改时间：22:06:11" itemprop="dateCreated datePublished" datetime="2020-01-21T21:06:13+08:00">2020-01-21</time>
-            
-
-            
-              
-
-              
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/informal-essay/" itemprop="url" rel="index"><span itemprop="name">informal essay</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2020/01/21/test/" class="leancloud_visitors" data-flag-title="restart">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数：</span>
-               
-                 <span class="leancloud-visitors-count"></span>
-             </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>去年电脑挂掉后就没管博客了，现在终于重新部署好了，继续不定期更新吧。</p>
-<p>记录些看论文和看书的笔记。</p>
-
-          
         
       
     </div>
@@ -2240,6 +2254,8 @@
                     
                       
                     
+                      
+                    
                     <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
@@ -2261,7 +2277,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">4</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">6</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>
@@ -2929,9 +2949,9 @@
   
     
       
-        
-      
     
+      
+        
       
     
       
